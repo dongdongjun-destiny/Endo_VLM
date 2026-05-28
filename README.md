@@ -43,6 +43,7 @@ python sft_train.py \
   --runname train_sft_cot_multimodal_v1 \
   --mode 1 \
   --epochs 3
+  
 3.2 GRPO 视频训练（示例）
 cd exvla
 python rft_grpo_video_train.py \
@@ -54,6 +55,7 @@ python rft_grpo_video_train.py \
   --task gastrohun \
   --epochs 3 \
   --max_completion_length 256
+  
 3.3 GRPO 图像训练（示例）
 cd exvla
 python rft_grpo_image_train.py \
