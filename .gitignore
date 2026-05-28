@@ -3,10 +3,12 @@ __pycache__/
 *.pyc
 *.log
 
-# wandb (通常非常大，建议不进仓库)
+# do NOT upload wandb
 **/wandb/**
 
-# model/checkpoint large files (ignore by type, keep folders + small metadata)
+# keep unsloth_compiled_cache (do NOT ignore it)
+
+# do NOT upload big weights/ckpt files (but keep folders)
 *.safetensors
 *.bin
 *.pt
