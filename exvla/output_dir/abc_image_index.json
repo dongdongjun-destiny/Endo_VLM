@@ -1,0 +1,4376 @@
+[
+  {
+    "abc_image_name": "abc_00000.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00001.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00002.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00003.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00004.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00005.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00006.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00007.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00008.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00009.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00010.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00011.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00012.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00013.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00014.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00015.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00016.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00017.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00018.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00019.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00020.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00021.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00022.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00023.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00024.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00025.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00026.png",
+    "permutation": [
+      "greater_curvature",
+      "lesser_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00027.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00028.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00029.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00030.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00031.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00032.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00033.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00034.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00035.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00036.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00037.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00038.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00039.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00040.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00041.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00042.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00043.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00044.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00045.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00046.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00047.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00048.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00049.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00050.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00051.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00052.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00053.png",
+    "permutation": [
+      "greater_curvature",
+      "pyloric_antrum",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00054.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00055.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00056.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00057.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00058.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00059.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00060.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00061.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00062.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      0,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00063.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00064.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00065.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00066.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00067.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00068.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00069.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00070.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00071.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      1,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00072.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00073.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00074.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00075.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00076.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00077.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00078.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00079.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00080.png",
+    "permutation": [
+      "lesser_curvature",
+      "greater_curvature",
+      "pyloric_antrum"
+    ],
+    "image_indices": [
+      2,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00081.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00082.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00083.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00084.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00085.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00086.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00087.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00088.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00089.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00090.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00091.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00092.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00093.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00094.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00095.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00096.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00097.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00098.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00099.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00100.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00101.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00102.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00103.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00104.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00105.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00106.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00107.png",
+    "permutation": [
+      "lesser_curvature",
+      "pyloric_antrum",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00108.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00109.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00110.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00111.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00112.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00113.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00114.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00115.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00116.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00117.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00118.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00119.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00120.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00121.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00122.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00123.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00124.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00125.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00126.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00127.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00128.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00129.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00130.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00131.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00132.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00133.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00134.png",
+    "permutation": [
+      "pyloric_antrum",
+      "greater_curvature",
+      "lesser_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00135.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00136.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00137.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00138.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00139.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00140.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00141.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00142.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00143.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      0,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "1.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00144.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00145.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00146.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00147.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00148.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00149.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00150.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00151.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00152.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      1,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "2.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00153.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00154.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00155.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      0,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "1.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00156.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00157.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00158.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      1,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "2.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00159.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      0
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "1.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00160.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      1
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "2.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  },
+  {
+    "abc_image_name": "abc_00161.png",
+    "permutation": [
+      "pyloric_antrum",
+      "lesser_curvature",
+      "greater_curvature"
+    ],
+    "image_indices": [
+      2,
+      2,
+      2
+    ],
+    "position_map": {
+      "a": {
+        "folder_key": "pyloric_antrum",
+        "image_file": "3.png"
+      },
+      "b": {
+        "folder_key": "lesser_curvature",
+        "image_file": "3.png"
+      },
+      "c": {
+        "folder_key": "greater_curvature",
+        "image_file": "3.png"
+      }
+    }
+  }
+]

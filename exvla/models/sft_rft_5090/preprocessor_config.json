@@ -1,0 +1,42 @@
+{
+  "crop_size": {
+    "height": 300,
+    "width": 1000
+  },
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "input_data_format": null,
+  "max_pixels": 1003520,
+  "merge_size": 2,
+  "min_pixels": 200704,
+  "pad_size": null,
+  "patch_size": 16,
+  "processor_class": "Qwen3VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 1024,
+    "shortest_edge": 768
+  },
+  "temporal_patch_size": 2
+}

@@ -3,18 +3,21 @@ __pycache__/
 *.pyc
 *.log
 
-# training artifacts (big)
-**/wandb/
-**/checkpoints/
-**/models/
-**/unsloth_compiled_cache/
+# wandb (通常非常大，建议不进仓库)
+**/wandb/**
 
-# output_dir: ignore by default, but keep jsonl
-**/output_dir/
-!**/output_dir/**/*.jsonl
+# model/checkpoint large files (ignore by type, keep folders + small metadata)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
 
-# large archives
+# large archives / videos
 *.zip
+*.mp4
+*.avi
+*.mov
 
 # secrets
 .env
