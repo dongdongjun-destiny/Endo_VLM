@@ -1,0 +1,71 @@
+2.23
+tmux new -t exvla1
+export CUDA_VISIBLE_DEVICES=2
+
+
+python /home/ren9/yidong-code/exendovla/exvla/sft_train.py \
+--data_path /home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl \
+--image_dir /media/ren9/Elements/exvla_clinical/Labeled_Images \
+--runname train_sft_5090_10percent_image \
+--mode 1 \
+--epochs 5
+
+
+
+cd /home/ren9/yidong-code/exendovla/exvla
+
+python sft_train.py \
+  --data_path output_dir/gastrohun_llm_en_images_train_cot1.jsonl \
+  --image_dir /media/ren9/Elements/exvla_clinical \
+  --runname sft_cot1_image_v1 \
+  --mode 1 \
+  --model qwen3_8b_instruct
+
+
+
+wandb: 
+wandb: Run history:
+wandb:         train/epoch ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇▇██
+wandb:   train/global_step ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb:     train/grad_norm ▆▅▃▃█▃▂▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▂▁▂▂▂▂▁▂▁▂▂▁▂▁▁
+wandb: train/learning_rate ▅███████▇▇▇▇▇▆▆▆▆▅▅▅▅▄▄▄▄▃▃▃▃▂▂▂▂▂▂▁▁▁▁▁
+wandb:          train/loss █▇▆▅▄▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               total_flos 1.2899507014550938e+17
+wandb:              train/epoch 1
+wandb:        train/global_step 507
+wandb:          train/grad_norm 0.25007
+wandb:      train/learning_rate 0.0
+wandb:               train/loss 0.0283
+wandb:               train_loss 0.28827
+wandb:            train_runtime 3265.9661
+wandb: train_samples_per_second 2.48
+wandb:   train_steps_per_second 0.155
+wandb: 
+wandb: 🚀 View run endovla_oral_sft_oral_exvla_sft_v1 at: https://wandb.ai/chikit-cuhk/endovla_oral/runs/cmb56hu8
+wandb: ⭐️ View project at: https://wandb.ai/chikit-cuhk/endovla_oral
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260223_145729-cmb56hu8/logs
+Adapters saved → ./models/oral_exvla_sft_v1
+
+Post-training accuracy: 60.00%
+Improvement: +20.00%
+
+
+# RFT from SFT checkpoint
+python /home/ren9/yidong-code/exendovla/exvla/rft_grpo_video_train.py \
+--data_path /home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train.jsonl \
+--image_dir /media/ren9/Elements/exvla_clinical/Labeled_Images \
+--checkpoint /home/ren9/yidong-code/exendovla/exvla/models/train_sft_5090_10percent_image \
+--runname grpo_5090_10percent_image \
+--mode 2 \
+--epochs 5 \
+--task gastrohun
+
+python /home/ET/jinchenhan/kit/exvla/evaluate.py \
+--model_path /home/ET/jinchenhan/kit/exvla/models/oral_exvla_sft_v1 \
+--eval_data /home/ET/jinchenhan/kit/exvla/output_dir/eval.json \
+--image_dir /home/ET/jinchenhan/kit/exvla/output_dir/abc_images \
+--output_dir /home/ET/jinchenhan/kit/exvla/eval \
+--run_tag sft_v1

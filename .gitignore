@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.pyc
+*.log
+
+# training artifacts (big)
+**/wandb/
+**/checkpoints/
+**/models/
+**/unsloth_compiled_cache/
+
+# output_dir: ignore by default, but keep jsonl
+**/output_dir/
+!**/output_dir/**/*.jsonl
+
+# large archives
+*.zip
+
+# secrets
+.env
+*.key
+*.pem

@@ -1,0 +1,88 @@
+{
+  "run_tag": "sft_v1",
+  "timestamp": "2026-02-23T16:05:09.191952",
+  "num_samples": 900,
+  "elapsed_seconds": 7.75511360168457,
+  "per_target": {
+    "greater_curvature": {
+      "conversion_success": 0.0,
+      "selection_accuracy": 0.0,
+      "appearance_accuracy": 0.0,
+      "station_accuracy": 0.0
+    },
+    "lesser_curvature": {
+      "conversion_success": 0.0,
+      "selection_accuracy": 0.0,
+      "appearance_accuracy": 0.0,
+      "station_accuracy": 0.0
+    },
+    "pyloric_antrum": {
+      "conversion_success": 0.0,
+      "selection_accuracy": 0.0,
+      "appearance_accuracy": 0.0,
+      "station_accuracy": 0.0
+    }
+  },
+  "overall": {
+    "conversion_success": 0.0,
+    "selection_accuracy": 0.0,
+    "appearance_accuracy": 0.0,
+    "station_accuracy": 0.0
+  },
+  "raw_counts": {
+    "greater_curvature": {
+      "conversion_success": {
+        "correct": 0,
+        "total": 300
+      },
+      "selection_accuracy": {
+        "correct": 0,
+        "total": 300
+      },
+      "appearance_accuracy": {
+        "correct": 0,
+        "total": 300
+      },
+      "station_accuracy": {
+        "correct": 0,
+        "total": 300
+      }
+    },
+    "lesser_curvature": {
+      "conversion_success": {
+        "correct": 0,
+        "total": 300
+      },
+      "selection_accuracy": {
+        "correct": 0,
+        "total": 300
+      },
+      "appearance_accuracy": {
+        "correct": 0,
+        "total": 300
+      },
+      "station_accuracy": {
+        "correct": 0,
+        "total": 300
+      }
+    },
+    "pyloric_antrum": {
+      "conversion_success": {
+        "correct": 0,
+        "total": 300
+      },
+      "selection_accuracy": {
+        "correct": 0,
+        "total": 300
+      },
+      "appearance_accuracy": {
+        "correct": 0,
+        "total": 300
+      },
+      "station_accuracy": {
+        "correct": 0,
+        "total": 300
+      }
+    }
+  }
+}
