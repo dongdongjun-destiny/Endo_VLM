@@ -21,7 +21,7 @@ Training Modes:
     Mode 1: Train from base model (attach new LoRA adapter)
     Mode 2: Continue from checkpoint with existing adapters
     Mode 3: Continue from checkpoint with merged adapters (attach new LoRA adapter)
-lo
+
 Usage:
     from config import *
 """
@@ -105,6 +105,59 @@ SSS_LABELS = (
     [f"P{i}" for i in range(1, 7)] + 
     ["NA"]
 )
+
+# SSS macro-region letters (GastroHUN): A=antrum, G=greater curvature/body, L=lesser, P=pylorus.
+# Used for GRPO partial accuracy when the predicted label is wrong but anatomically close.
+SSS_MACRO_LETTERS = ("A", "G", "L", "P")
+SSS_ADJACENT_MACRO_LETTERS = {
+    "A": frozenset({"G", "L", "P"}),
+    "G": frozenset({"A", "L"}),
+    "L": frozenset({"A", "G", "P"}),
+    "P": frozenset({"A", "L"}),
+}
+
+
+def parse_sss_label_code(label: str):
+    """Return (macro_letter, subsite_index) for A1–P6, or ('NA', 0) for NA; else None."""
+    code = (label or "").strip().upper()
+    if not code:
+        return None
+    if code == "NA":
+        return ("NA", 0)
+    m = re.fullmatch(r"([AGLP])([1-6])", code)
+    if m:
+        return (m.group(1), int(m.group(2)))
+    return None
+
+
+def gastrohun_partial_accuracy_reward(
+    gt_label: str,
+    pred_label: str,
+    *,
+    same_letter_reward: float = 0.05,
+    adjacent_region_reward: float = 0.05,
+) -> float:
+    """GRPO shaping only: partial credit for near-miss SSS labels (eval stays strict)."""
+    gt = (gt_label or "").strip().upper()
+    pred = (pred_label or "").strip().upper()
+    if not gt or not pred or gt == pred:
+        return 0.0
+    if gt == "NA" or pred == "NA":
+        return 0.0
+
+    gt_parsed = parse_sss_label_code(gt)
+    pred_parsed = parse_sss_label_code(pred)
+    if not gt_parsed or not pred_parsed:
+        return 0.0
+
+    gt_letter, _ = gt_parsed
+    pred_letter, _ = pred_parsed
+    if gt_letter == pred_letter:
+        return float(same_letter_reward)
+    if pred_letter in SSS_ADJACENT_MACRO_LETTERS.get(gt_letter, frozenset()):
+        return float(adjacent_region_reward)
+    return 0.0
+
 
 # 旧版描述性标签
 LEGACY_STATIONS = ["greater curvature", "lesser curvature", "pyloric antrum"]
@@ -221,14 +274,14 @@ You must classify into exactly one SSS label from:
 A1-A6, G1-G4, L1-L6, P1-P6, NA.
 
 Output requirements:
-1) Give a short visible explanation (1-2 sentences) using anatomical clues.
-2) End with one final code line: SSS: <LABEL>
+1) Start with exactly one conclusion line: Final SSS: <LABEL>
+2) Then give a short visible explanation (1-2 sentences) using anatomical clues.
 3) Mention exactly one SSS label code in the whole answer.
 4) Do not output only the code without explanation."""
 
 SYSTEM_PROMPT_SIMPLE = """You are an endoscopic assistant.
-Give a short explanation, then output one final SSS code line:
-SSS: <LABEL>
+Start with one conclusion line, then give a short explanation:
+Final SSS: <LABEL>
 Allowed labels: A1-A6, G1-G4, L1-L6, P1-P6, NA."""
 
 
@@ -237,14 +290,14 @@ Allowed labels: A1-A6, G1-G4, L1-L6, P1-P6, NA."""
 # ==============================================================================
 
 def build_user_prompt(oral_instruction: str) -> str:
-    """Build the user prompt with short visible reasoning + final label output."""
+    """Build the user prompt with a leading final label + short visible reasoning."""
     return f"""Analyze the lesion from the oral description and image.
 
 User's oral description: "{oral_instruction}"
 
 Please respond with:
-1) A short explanation (1-2 sentences) of why the station fits.
-2) One final line: SSS: <LABEL>
+1) First line: Final SSS: <LABEL>
+2) Then a short explanation (1-2 sentences) of why the station fits.
 
 Use exactly one label from A1-A6, G1-G4, L1-L6, P1-P6, NA."""
 
@@ -661,9 +714,13 @@ RFT_CONFIG = {
 # ==============================================================================
 
 REWARD_CONFIG = {
-    "format_weight": 0.25,
-    "accuracy_weight": 0.75,
+    # Format is structure-only (Final SSS line + short explanation); accuracy drives labels.
+    "format_weight": 0.13,
+    "accuracy_weight": 0.87,
     "doctor_preference_weight": 0.30,
+    # Partial gastrohun accuracy (GRPO only; strict eval unchanged).
+    "partial_same_letter_reward": 0.05,
+    "partial_adjacent_region_reward": 0.05,
     # GastroHun jsonl "chosen" is usually just the SSS label (e.g. "P5"), not a doctor rewrite.
     # Keep False for label+format GRPO; use --doctor_pref only with real chosen/rejected text.
     "enable_doctor_preference": False,
@@ -806,6 +863,78 @@ def get_training_user_text(sample: dict) -> str:
     if sample.get("user_instruction"):
         return sample["user_instruction"]
     return build_user_prompt(sample.get("oral_instruction", ""))
+
+
+def get_grpo_system_prompt(task_name: str = "gastrohun") -> str:
+    """System prompt for GRPO rollouts and gastrohun eval (leading Final SSS)."""
+    if task_name == "gastrohun":
+        return SYSTEM_PROMPT
+    return SYSTEM_PROMPT
+
+
+def get_grpo_user_text(sample: dict, task_name: str = "gastrohun") -> str:
+    """User prompt for GRPO / eval — same format as training target (Final SSS first)."""
+    if task_name == "gastrohun":
+        ui = (sample.get("user_instruction") or "").strip()
+        if ui:
+            if "first line" in ui.lower() and "final sss" in ui.lower():
+                return ui
+            return (
+                f"{ui}\n\n"
+                "Reply format:\n"
+                "1) First line: Final SSS: <LABEL>\n"
+                "2) Then 1-2 sentences of explanation."
+            )
+        return build_user_prompt(sample.get("oral_instruction", ""))
+    return get_training_user_text(sample)
+
+
+def parse_final_sss_first_line(text: str) -> Optional[str]:
+    """Strict: first non-empty line must be ``Final SSS: <LABEL>``."""
+    clean = (text or "").strip()
+    lines = [ln.strip() for ln in clean.splitlines() if ln.strip()]
+    if not lines:
+        return None
+    m = re.search(
+        r"^Final\s+SSS\s*[:：]\s*([AGLP][1-6]|NA)\b",
+        lines[0],
+        re.IGNORECASE,
+    )
+    return m.group(1).upper() if m else None
+
+
+def parse_gastrohun_head_line(text: str) -> Optional[str]:
+    """First line: Final SSS / Final / SSS / Answer / 最终 / 结论."""
+    clean = (text or "").strip()
+    lines = [ln.strip() for ln in clean.splitlines() if ln.strip()]
+    if not lines:
+        return None
+    m = re.search(
+        r"^(?:Final\s+SSS|Final|SSS|Answer|最终|结论)\s*[:：]\s*([AGLP][1-6]|NA)\b",
+        lines[0],
+        re.IGNORECASE,
+    )
+    return m.group(1).upper() if m else None
+
+
+def parse_gastrohun_eval_label(text: str) -> Optional[str]:
+    """Evaluation label: strict Final SSS first line, else first declared label in text."""
+    strict = parse_final_sss_first_line(text)
+    if strict:
+        return strict
+    clean = (text or "").strip()
+    if not clean:
+        return None
+    pattern = re.compile(
+        r"(?:(?:final\s+sss|final|sss|answer|最终|结论))\s*[:：]\s*([AGLP][1-6]|NA)\s*$",
+        re.IGNORECASE,
+    )
+    for line in [ln.strip() for ln in clean.splitlines() if ln.strip()]:
+        m = pattern.search(line)
+        if m:
+            return m.group(1).upper()
+    labels = re.findall(r"\b([AGLP][1-6]|NA)\b", clean.upper())
+    return labels[0] if len(labels) == 1 else None
 
 
 def build_train_video_content(video_path: str) -> dict:
