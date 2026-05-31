@@ -1153,7 +1153,13 @@ def run_grpo_training(modality: str, wandb_group: str, banner: str) -> None:
         num_samples=min(5, len(train_samples)),
         task_name=args.task,
     )
-    print(f"Pre-RL full accuracy: {pre_results['full_accuracy']:.2%}")
+    if args.task == "gastrohun" and "final_sss_accuracy" in pre_results:
+        print(
+            f"Pre-RL Final SSS accuracy: {pre_results['final_sss_accuracy']:.2%} "
+            f"(fallback label accuracy: {pre_results.get('fallback_label_accuracy', 0.0):.2%})"
+        )
+    else:
+        print(f"Pre-RL full accuracy: {pre_results['full_accuracy']:.2%}")
 
     train_rft(model, processor, train_samples, args=args, config=_build_grpo_config(args, modality), training_mode=training_mode)
 
@@ -1166,7 +1172,13 @@ def run_grpo_training(modality: str, wandb_group: str, banner: str) -> None:
         num_samples=min(10, len(train_samples)),
         task_name=args.task,
     )
-    print(f"Post-RL full accuracy: {post_results['full_accuracy']:.2%}")
+    if args.task == "gastrohun" and "final_sss_accuracy" in post_results:
+        print(
+            f"Post-RL Final SSS accuracy: {post_results['final_sss_accuracy']:.2%} "
+            f"(fallback label accuracy: {post_results.get('fallback_label_accuracy', 0.0):.2%})"
+        )
+    else:
+        print(f"Post-RL full accuracy: {post_results['full_accuracy']:.2%}")
 
 
 # ==============================================================================
@@ -1448,13 +1460,25 @@ def setup_model(model_name: str = BASE_MODEL_NAME, checkpoint_path: Optional[str
 # ==============================================================================
 # INFERENCE & EVAL
 # ==============================================================================
-def run_inference(model, processor, sample: Dict[str, Any], model_name: str = BASE_MODEL_NAME) -> str:
+def run_inference(
+    model,
+    processor,
+    sample: Dict[str, Any],
+    model_name: str = BASE_MODEL_NAME,
+    task_name: str = "gastrohun",
+) -> str:
     import torch._dynamo
     torch._dynamo.config.suppress_errors = True
     FastVisionModel.for_inference(model)
 
-    sys_prompt = sample.get("system_instruction", SYSTEM_PROMPT)
-    user_prompt = get_training_user_text(sample)
+    from config import get_grpo_system_prompt, get_grpo_user_text
+
+    if task_name == "gastrohun":
+        sys_prompt = get_grpo_system_prompt(task_name)
+        user_prompt = get_grpo_user_text(sample, task_name)
+    else:
+        sys_prompt = sample.get("system_instruction", SYSTEM_PROMPT)
+        user_prompt = get_training_user_text(sample)
 
     if sample["type"] == "video":
         media_content = build_train_video_content(sample["media_path"])
@@ -1496,20 +1520,26 @@ def evaluate_model(model, processor, samples: List[Dict[str, Any]], model_name: 
 
     for sample in eval_samples:
         try:
-            output = run_inference(model, processor, sample, model_name)
+            output = run_inference(model, processor, sample, model_name, task_name=task_name)
             pred = parse_prediction(output)
             results["total"] += 1
             
             target_label = str(sample.get("target_label", "")).strip().upper()
             
-            # 👑 针对 GastroHUN 任务的评分标准 (只看 Label)
+            # GastroHUN eval accuracy is strict: first line must be "Final SSS: <LABEL>".
             if task_name == "gastrohun":
-                if pred and pred["label"].upper() == target_label:
+                from config import parse_final_sss_first_line, parse_gastrohun_eval_label
+
+                strict_label = parse_final_sss_first_line(output)
+                fallback_label = parse_gastrohun_eval_label(output)
+                results.setdefault("final_sss_correct", 0)
+                results.setdefault("fallback_label_correct", 0)
+                if strict_label and strict_label == target_label:
+                    results["final_sss_correct"] += 1
                     results["label_correct"] += 1
                     results["full_correct"] += 1
-                elif target_label and target_label in output.upper():
-                    results["label_correct"] += 1
-                    results["full_correct"] += 1
+                if fallback_label and fallback_label == target_label:
+                    results["fallback_label_correct"] += 1
                     
             # 📸 针对 legacy_endoscopy 旧版任务的评分标准 (必须三者全对)
             else:
@@ -1534,10 +1564,17 @@ def evaluate_model(model, processor, samples: List[Dict[str, Any]], model_name: 
             "label_accuracy": results["label_correct"] / t, 
             "appearance_accuracy": results["appearance_correct"] / t,
             "station_accuracy": results["station_correct"] / t, 
-            "full_accuracy": results["full_correct"] / t
+            "full_accuracy": results["full_correct"] / t,
         })
+        if "final_sss_correct" in results:
+            results["final_sss_accuracy"] = results["final_sss_correct"] / t
+        if "fallback_label_correct" in results:
+            results["fallback_label_accuracy"] = results["fallback_label_correct"] / t
     else:
         results.update({"label_accuracy": 0.0, "appearance_accuracy": 0.0, "station_accuracy": 0.0, "full_accuracy": 0.0})
+        if task_name == "gastrohun":
+            results["final_sss_accuracy"] = 0.0
+            results["fallback_label_accuracy"] = 0.0
     return results
 
 
@@ -1593,12 +1630,18 @@ def evaluate_model(model, processor, samples: List[Dict[str, Any]], model_name: 
 
 
 def create_grpo_dataset(samples: List[Dict[str, Any]], processor, task_name: str) -> Dataset:
+    from config import get_grpo_system_prompt, get_grpo_user_text
+
     data_list = []
     
     # 用 tqdm 包裹 samples，并添加描述文本
     for sample in tqdm(samples, desc=f"Creating GRPO dataset ({task_name})"):
-        sys_prompt = sample.get("system_instruction", SYSTEM_PROMPT)
-        user_prompt = get_training_user_text(sample)
+        if task_name == "gastrohun":
+            sys_prompt = get_grpo_system_prompt(task_name)
+            user_prompt = get_grpo_user_text(sample, task_name)
+        else:
+            sys_prompt = sample.get("system_instruction", SYSTEM_PROMPT)
+            user_prompt = get_training_user_text(sample)
 
         if sample["type"] == "video":
             media_content = build_train_video_content(sample["media_path"])
@@ -1721,6 +1764,10 @@ VALID_SSS_LABELS = {
 DOCTOR_CHOSEN_MIN_CHARS = 32
 
 _active_grpo_reward_style = "short"
+_active_grpo_partial_rewards = {
+    "partial_same_letter_reward": 0.05,
+    "partial_adjacent_region_reward": 0.05,
+}
 
 
 def _set_grpo_reward_style(style: str) -> None:
@@ -1728,36 +1775,62 @@ def _set_grpo_reward_style(style: str) -> None:
     _active_grpo_reward_style = style if style in ("short", "cot") else "short"
 
 
+def _set_grpo_partial_rewards(cfg: dict) -> None:
+    global _active_grpo_partial_rewards
+    _active_grpo_partial_rewards = {
+        "partial_same_letter_reward": float(cfg.get("partial_same_letter_reward", 0.05)),
+        "partial_adjacent_region_reward": float(cfg.get("partial_adjacent_region_reward", 0.05)),
+    }
+
+
 def _extract_gastrohun_pred_label(text: str) -> Optional[str]:
-    """Parse predicted SSS label; cot style uses the last valid code in long reasoning."""
+    """Parse predicted SSS label; prefer an explicit leading Final SSS line."""
     upper = (text or "").upper()
+    declared = _extract_gastrohun_declared_label(text)
+    if declared:
+        return declared
     if _active_grpo_reward_style == "cot":
         labels = re.findall(r"\b([AGLP][1-6]|NA)\b", upper)
-        return labels[-1] if labels else None
+        return labels[0] if labels else None
     words = re.findall(r"\b[A-Z0-9]+\b", upper)
     found = [w for w in words if w in VALID_SSS_LABELS]
     return found[0] if len(found) == 1 else None
 
 
-def _gastrohun_tail_label(text: str) -> Optional[str]:
+def _gastrohun_head_label(text: str) -> Optional[str]:
     clean = (text or "").strip()
-    tail = re.search(
-        r"(?:SSS|Final\s+SSS|Final)\s*[:：]\s*([AGLP][1-6]|NA)\s*$",
-        clean,
+    lines = [ln.strip() for ln in clean.splitlines() if ln.strip()]
+    if not lines:
+        return None
+    head = re.search(
+        r"^(?:Final\s+SSS|Final|SSS|Answer|最终|结论)\s*[:：]\s*([AGLP][1-6]|NA)\b",
+        lines[0],
         re.IGNORECASE,
     )
-    return tail.group(1).upper() if tail else None
+    return head.group(1).upper() if head else None
+
+
+def _gastrohun_final_sss_head_label(text: str) -> Optional[str]:
+    """Strict eval target: first non-empty line must be exactly Final SSS: <LABEL>."""
+    clean = (text or "").strip()
+    lines = [ln.strip() for ln in clean.splitlines() if ln.strip()]
+    if not lines:
+        return None
+    head = re.search(
+        r"^Final\s+SSS\s*[:：]\s*([AGLP][1-6]|NA)\b",
+        lines[0],
+        re.IGNORECASE,
+    )
+    return head.group(1).upper() if head else None
 
 
 def _extract_gastrohun_final_label(text: str) -> Optional[str]:
     """Get the final predicted SSS label from a completion.
 
-    Rule: must explicitly declare the final label on the last line (Final/SSS).
-    We do NOT accept earlier mentions as the final answer.
+    Rule: must explicitly declare the label on the first line (Final SSS).
+    We do NOT accept later mentions as the primary final answer.
     """
-    clean = (text or "").strip()
-    tail = _gastrohun_tail_label(clean)
-    return tail
+    return _gastrohun_final_sss_head_label(text)
 
 
 def _extract_gastrohun_declared_label(text: str) -> Optional[str]:
@@ -1769,7 +1842,8 @@ def _extract_gastrohun_declared_label(text: str) -> Optional[str]:
       - SSS: P5
       - Answer: P5
       - 最终: P5 / 结论: P5
-    We scan from bottom to top and take the first match (closest to the end).
+    We scan from top to bottom and take the first match, because the target
+    format starts with the conclusion before the explanation.
     """
     clean = (text or "").strip()
     if not clean:
@@ -1778,23 +1852,23 @@ def _extract_gastrohun_declared_label(text: str) -> Optional[str]:
         r"(?:(?:final\s+sss|final|sss|answer|最终|结论))\s*[:：]\s*([AGLP][1-6]|NA)\s*$",
         re.IGNORECASE,
     )
-    for line in reversed([ln.strip() for ln in clean.splitlines() if ln.strip()]):
+    for line in [ln.strip() for ln in clean.splitlines() if ln.strip()]:
         m = pattern.search(line)
         if m:
             return m.group(1).upper()
     return None
 
 
-def _gastrohun_last_line_is_uncertain(text: str) -> bool:
-    """Heuristic: last line must not present multiple candidate labels (e.g. 'P4 or P5')."""
+def _gastrohun_answer_line_is_uncertain(text: str) -> bool:
+    """Heuristic: first answer line must not present multiple labels (e.g. 'P4 or P5')."""
     clean = (text or "").strip()
     if not clean:
         return False
-    last = clean.splitlines()[-1].strip().lower()
-    if " or " in last:
+    first = clean.splitlines()[0].strip().lower()
+    if " or " in first:
         return True
-    # If the last line contains 2+ valid labels, treat it as multiple-choice.
-    labels = re.findall(r"\b([aglp][1-6]|na)\b", last)
+    # If the answer line contains 2+ valid labels, treat it as multiple-choice.
+    labels = re.findall(r"\b([aglp][1-6]|na)\b", first)
     return len(labels) >= 2
 
 
@@ -1821,10 +1895,13 @@ def _extract_gastrohun_biased_label(text: str) -> Optional[str]:
 
 
 def _extract_gastrohun_any_label(text: str) -> Optional[str]:
-    """Fallback parse: last valid label anywhere in the text (used for shaping)."""
+    """Fallback parse: first valid label (leading-answer format) for reward shaping."""
+    head = _gastrohun_head_label(text or "")
+    if head:
+        return head
     upper = (text or "").upper()
     labels = re.findall(r"\b([AGLP][1-6]|NA)\b", upper)
-    return labels[-1] if labels else None
+    return labels[0] if labels else None
 
 
 def _extract_gastrohun_decisive_label(text: str) -> Optional[str]:
@@ -1849,14 +1926,12 @@ def _extract_gastrohun_decisive_label(text: str) -> Optional[str]:
         return biased
 
     # Otherwise, require exactly one unique label in the whole completion.
-    if _gastrohun_last_line_is_uncertain(clean):
+    if _gastrohun_answer_line_is_uncertain(clean):
         return None
     labels = re.findall(r"\b([AGLP][1-6]|NA)\b", clean.upper())
     if not labels:
         return None
     return labels[-1] if len(set(labels)) == 1 else None
-
-
 
 
 def oral_format_reward(completions, **kwargs) -> List[float]:
@@ -1895,7 +1970,7 @@ def oral_format_reward(completions, **kwargs) -> List[float]:
                 if len(text.strip()) < 200: 
                     reward += 0.1
 
-        # 2: gastrohun 格式打分
+        # 2: gastrohun 格式打分（只看结构，不看标签是否与 GT 一致）
         elif current_task == "gastrohun":
             style = _active_grpo_reward_style
             clean_text = text.strip()
@@ -1903,62 +1978,96 @@ def oral_format_reward(completions, **kwargs) -> List[float]:
             lines = [ln.strip() for ln in clean_text.splitlines() if ln.strip()]
             lower_text = clean_text.lower()
 
-            # Shaping: if model outputs any valid label anywhere, give a small base reward
-            # so training doesn't get stuck at all-zero rewards before it learns the Final/SSS line.
-            any_label = _extract_gastrohun_any_label(clean_text)
-            if any_label:
+            # Early shaping: any valid SSS code in the completion (keeps a small signal
+            # before the model learns strict line-1 Final SSS).
+            if _extract_gastrohun_any_label(clean_text):
                 reward += 0.05
 
-            # High score requires a single decisive label (Final/SSS tail preferred but not required).
-            pred_label = _extract_gastrohun_decisive_label(clean_text)
-            tail_label = _gastrohun_tail_label(clean_text)
-            if pred_label:
-                # decisive answer present
-                reward += 0.30
-                if tail_label is not None and tail_label == pred_label:
-                    reward += 0.10
+            from config import parse_final_sss_first_line
 
-                if _gastrohun_last_line_is_uncertain(clean_text):
-                    reward -= 0.2
-                if len(lines) >= 2 and len(" ".join(lines[:-1])) >= 12:
-                    reward += 0.2
+            head_label = _gastrohun_head_label(clean_text)
+            final_sss_label = parse_final_sss_first_line(clean_text)
+
+            # Primary gate: strict "Final SSS: <LABEL>" on line 1 (matches eval target).
+            if final_sss_label is not None:
+                reward += 0.45
+            elif head_label is not None:
+                reward += 0.20
+
+            has_leading_answer = final_sss_label is not None or head_label is not None
+            if has_leading_answer:
+                if _gastrohun_answer_line_is_uncertain(clean_text):
+                    reward -= 0.15
+                # Explanation after the first line.
+                if len(lines) >= 2 and len(" ".join(lines[1:])) >= 12:
+                    reward += 0.15
 
                 short_cues = ("because", "due to", "based on", "reason", "view", "landmark")
                 cot_cues = short_cues + (
                     "step 1", "step 2", "final region", "mucosal", "pylorus", "cardia", "fundus"
                 )
                 if any(cue in lower_text for cue in (cot_cues if style == "cot" else short_cues)):
-                    reward += 0.2
+                    reward += 0.10
 
                 if style == "short":
-                    if text_len <= 5:
-                        reward += 0.0
-                    elif 12 <= text_len <= 180:
-                        reward += 0.2
-                    else:
-                        reward += 0.1
+                    if 12 <= text_len <= 180:
+                        reward += 0.10
+                    elif text_len > 180:
+                        reward += 0.05
                 else:
-                    # CoT-style: encourage multi-step reasoning structure before the final label.
                     step_hits = len(re.findall(r"\bstep\s*\d+\b", lower_text))
                     if step_hits >= 3:
-                        reward += 0.2
-                    elif step_hits >= 2:
                         reward += 0.15
+                    elif step_hits >= 2:
+                        reward += 0.10
                     elif step_hits >= 1:
-                        reward += 0.1
+                        reward += 0.05
 
                     if 80 <= text_len <= 3500:
-                        reward += 0.2
+                        reward += 0.10
                     elif text_len >= 40:
-                        reward += 0.1
-                    if "step 1" in lower_text and ("final sss" in lower_text or tail_label):
-                        reward += 0.1
+                        reward += 0.05
+                    if "step 1" in lower_text and ("final sss" in lower_text or head_label):
+                        reward += 0.05
 
         rewards.append(max(0.0, min(1.0, reward)))
     return rewards
 
 
 def oral_accuracy_reward(completions, **kwargs) -> List[float]:
+    def extract_reward_label(text: str) -> Optional[str]:
+        """Accuracy parser: prefer leading Final SSS, then lenient first-label fallback."""
+        clean = (text or "").strip()
+        if not clean:
+            return None
+
+        head = _gastrohun_head_label(clean)
+        if head:
+            return head
+
+        label = _extract_gastrohun_decisive_label(clean)
+        if label:
+            return label
+
+        lines = [ln.strip() for ln in clean.splitlines() if ln.strip()]
+        if lines:
+            first_line = lines[0]
+            if " or " not in first_line.lower():
+                first_labels = re.findall(r"\b([AGLP][1-6]|NA)\b", first_line.upper())
+                if first_labels:
+                    return first_labels[0]
+
+        # Long CoT-style rollouts: after the target format change, grade by the first mention.
+        if _active_grpo_reward_style == "cot" or len(clean) > 120:
+            labels = re.findall(r"\b([AGLP][1-6]|NA)\b", clean.upper())
+            if labels:
+                return labels[0]
+
+        labels = re.findall(r"\b([AGLP][1-6]|NA)\b", clean.upper())
+        if len(labels) == 1:
+            return labels[0]
+        return None
+
     target_labels = kwargs.get("target_label", [])
     gt_appearances = kwargs.get("gt_appearance", [])
     gt_stations = kwargs.get("gt_station", [])
@@ -1990,12 +2099,27 @@ def oral_accuracy_reward(completions, **kwargs) -> List[float]:
                 
         #  gastrohun 精度打分
         elif current_task == "gastrohun":
-            # Only care about the (single) decisive label; Final/SSS tail is preferred but not required.
-            pred_label = _extract_gastrohun_decisive_label(text)
+            from config import gastrohun_partial_accuracy_reward, parse_final_sss_first_line
+
+            final_sss_label = parse_final_sss_first_line(text)
+            pred_label = extract_reward_label(text)
 
             if pred_label and gt_label:
                 if pred_label == gt_label:
-                    reward += 1.0
+                    # 1.0 = correct + strict "Final SSS: X" on line 1 (matches eval target).
+                    # 0.5 = correct label via fallback parse (still trains vision→label).
+                    reward += 1.0 if final_sss_label == gt_label else 0.5
+                else:
+                    reward += gastrohun_partial_accuracy_reward(
+                        gt_label,
+                        pred_label,
+                        same_letter_reward=_active_grpo_partial_rewards[
+                            "partial_same_letter_reward"
+                        ],
+                        adjacent_region_reward=_active_grpo_partial_rewards[
+                            "partial_adjacent_region_reward"
+                        ],
+                    )
 
         rewards.append(max(0.0, min(1.0, reward)))
     return rewards
@@ -2073,6 +2197,7 @@ def train_rft(model, processor, train_samples: List[Dict[str, Any]], args=None, 
 
     config = dict(config or get_grpo_train_config())
     _set_grpo_reward_style(str(config.get("reward_style", "short")))
+    _set_grpo_partial_rewards(config)
 
     num_epochs = args.epochs if args.epochs else config["num_epochs"]
     learning_rate = args.lr if args.lr else config["learning_rate"]
@@ -2101,20 +2226,28 @@ def train_rft(model, processor, train_samples: List[Dict[str, Any]], args=None, 
         + f" | enable_doctor_preference={enable_doctor_pref}"
         + f" | reward_weights={reward_weights}"
     )
+    print(
+        "GastroHUN format: structure-only (strict line-1 Final SSS + explanation); "
+        "+0.05 if any valid SSS code appears (early shaping). "
+        "Accuracy: 1.0 if line-1 is 'Final SSS: <GT>'; 0.5 if label correct via fallback; "
+        f"partial +{config.get('partial_same_letter_reward', 0.05)} same letter, "
+        f"+{config.get('partial_adjacent_region_reward', 0.05)} adjacent macro-region. "
+        "Eval label_accuracy/full_accuracy are strict Final SSS."
+    )
 
     if args and getattr(args, "output_dir", None):
         output_dir = args.output_dir
     elif args and getattr(args, "runname", None):
-        output_dir = f"/home/ren9/yidong-code/exendovla/exvla/checkpoints/{args.runname}"
+        output_dir = f"/home/rennc1/Documents/Yidong_code/exvla/checkpoints/{args.runname}"
     else:
-        output_dir = "/home/ren9/yidong-code/exendovla/exvla/checkpoints/default_rft_run"
+        output_dir = "/home/rennc1/Documents/Yidong_code/exvla/checkpoints/default_rft_run"
 
     os.makedirs(output_dir, exist_ok=True)
 
     if args and getattr(args, "runname", None):
-        model_save_dir = f"/home/ren9/yidong-code/exendovla/exvla/models/{args.runname}"
+        model_save_dir = f"/home/rennc1/Documents/Yidong_code/exvla/models/{args.runname}"
     else:
-        model_save_dir = "/home/ren9/yidong-code/exendovla/exvla/models/default_rft_run"
+        model_save_dir = "/home/rennc1/Documents/Yidong_code/exvla/models/default_rft_run"
         
     modality = _grpo_modality()
     if modality in ("image", "video"):
@@ -2131,6 +2264,13 @@ def train_rft(model, processor, train_samples: List[Dict[str, Any]], args=None, 
         f"| batch={batch_size}, num_generations={num_generations} "
         "(rollout only; eval uses INSTRUCT_GENERATION_CONFIG)"
     )
+    if modality == "video" and max_completion_length < 512:
+        print(
+            "WARNING: max_completion_length < 512 for video GRPO. "
+            "The target format now puts 'Final SSS: <label>' first, but very short "
+            "completions can still clip the explanation and weaken format rewards. "
+            "Use --max_completion_length 512 or 1024 (config default is 1024)."
+        )
     if torch.cuda.is_available():
         free_gb = torch.cuda.mem_get_info()[0] / (1024 ** 3)
         if free_gb < 4.0:
