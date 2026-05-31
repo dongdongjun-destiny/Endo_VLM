@@ -15,7 +15,7 @@ import random
 from pathlib import Path
 from typing import Dict, List
 
-ROOT_DIR = Path("/media/ren9/Elements/exvla_clinical")
+ROOT_DIR = Path("/media/rennc1/Elements/exvla_clinical")
 SEED = 42
 SFT_TRAIN_RATIO = 0.10  # 10% train subset for fast CoT-SFT iteration
 

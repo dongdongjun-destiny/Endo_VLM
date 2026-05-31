@@ -6,9 +6,9 @@ import argparse
 
 from inference_core import EndoVLAInferenceEngine
 
-DEFAULT_MODEL = "/home/ren9/yidong-code/exendovla/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
-DEFAULT_JSONL = "/home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl"
-DEFAULT_EXCEL = "/home/ren9/yidong-code/exendovla/exvla/evaluation_report_clinical_metrics.xlsx"
+DEFAULT_MODEL = "/home/rennc1/Documents/Yidong_code/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
+DEFAULT_JSONL = "/home/rennc1/Documents/Yidong_code/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl"
+DEFAULT_EXCEL = "/home/rennc1/Documents/Yidong_code/exvla/evaluation_report_clinical_metrics.xlsx"
 
 
 def main():

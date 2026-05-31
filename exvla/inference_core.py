@@ -28,9 +28,13 @@ try:
         SYSTEM_PROMPT,
         build_train_video_content,
         get_generation_config,
+        get_grpo_system_prompt,
+        get_grpo_user_text,
         get_training_user_text,
         is_thinking_model,
         normalize_training_sample,
+        parse_final_sss_first_line,
+        parse_gastrohun_eval_label,
         setup_processor_image_size,
     )
 except ImportError:
@@ -38,9 +42,13 @@ except ImportError:
     SYSTEM_PROMPT = "You are an expert gastrointestinal endoscopist."
     build_train_video_content = None
     get_generation_config = None
+    get_grpo_system_prompt = lambda _=None: SYSTEM_PROMPT
+    get_grpo_user_text = None
     get_training_user_text = None
     is_thinking_model = lambda _: False
     normalize_training_sample = None
+    parse_final_sss_first_line = None
+    parse_gastrohun_eval_label = None
     setup_processor_image_size = lambda p: p
 
 VIDEO_EXTS = {".mp4", ".avi", ".mov", ".mkv", ".webm"}
@@ -102,9 +110,17 @@ def parse_thinking_output(text: str) -> Tuple[str, str]:
             answer = raw
         return thinking, answer
 
-    # Qwen redacted / plain CoT: split before final SSS line if present
+    # Leading Final SSS format: first line is the answer
+    if parse_final_sss_first_line:
+        head = parse_final_sss_first_line(raw)
+        if head:
+            lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
+            answer = lines[0] if lines else raw
+            thinking = "\n".join(lines[1:]).strip() if len(lines) > 1 else ""
+            return thinking, answer
+
     tail = re.search(
-        r"((?:SSS|Final)\s*[:：]\s*[AGLP][1-6]|NA)\s*$",
+        r"((?:Final\s+SSS|SSS|Final)\s*[:：]\s*[AGLP][1-6]|NA)\s*$",
         raw,
         re.IGNORECASE | re.MULTILINE,
     )
@@ -116,13 +132,21 @@ def parse_thinking_output(text: str) -> Tuple[str, str]:
     if len(raw) > 120 and "\n" in raw:
         lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
         if len(lines) >= 2:
-            return "\n".join(lines[:-1]), lines[-1]
+            return "\n".join(lines[1:]), lines[0]
 
     return "", raw
 
 
 def extract_sss_label(text: str) -> str:
-    """Extract a single SSS label; prefer last valid token (medical: unique label)."""
+    """Extract SSS label; align with GRPO eval (Final SSS first line)."""
+    if parse_gastrohun_eval_label:
+        label = parse_gastrohun_eval_label(text)
+        if label:
+            return label
+    if parse_final_sss_first_line:
+        label = parse_final_sss_first_line(text)
+        if label:
+            return label
     upper = (text or "").upper()
     labels = re.findall(r"\b([AGLP][1-6]|NA|OTHERCLASS)\b", upper)
     if not labels:
@@ -130,7 +154,7 @@ def extract_sss_label(text: str) -> str:
         return match.group(1) if match else upper.strip()[:32]
     if len(labels) == 1:
         return labels[0]
-    return labels[-1]
+    return labels[0]
 
 
 def count_sss_labels(text: str) -> int:
@@ -374,10 +398,14 @@ class EndoVLAInferenceEngine:
         media_type = sample.get("type", detect_media_type(media_path))
         if media_type in ("sequence",):
             media_type = "video"
-        sys_p = sample.get("system_instruction", SYSTEM_PROMPT)
-        if get_training_user_text:
+        if get_grpo_user_text:
+            sys_p = get_grpo_system_prompt("gastrohun")
+            user_p = get_grpo_user_text(sample, "gastrohun")
+        elif get_training_user_text:
+            sys_p = sample.get("system_instruction", SYSTEM_PROMPT)
             user_p = get_training_user_text(sample)
         else:
+            sys_p = sample.get("system_instruction", SYSTEM_PROMPT)
             user_p = sample.get("user_instruction", sample.get("oral_instruction", ""))
         gt = sample.get("target_label") or sample.get("label_code") or sample.get("answer", "")
         res = self.predict(media_path, sys_p, user_p, media_type=media_type, for_eval=for_eval)

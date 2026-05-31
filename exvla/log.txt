@@ -3,20 +3,20 @@ tmux new -t exvla1
 export CUDA_VISIBLE_DEVICES=2
 
 
-python /home/ren9/yidong-code/exendovla/exvla/sft_train.py \
---data_path /home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl \
---image_dir /media/ren9/Elements/exvla_clinical/Labeled_Images \
+python /home/rennc1/Documents/Yidong_code/exvla/sft_train.py \
+--data_path /home/rennc1/Documents/Yidong_code/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl \
+--image_dir /media/rennc1/Elements/exvla_clinical/Labeled_Images \
 --runname train_sft_5090_10percent_image \
 --mode 1 \
 --epochs 5
 
 
 
-cd /home/ren9/yidong-code/exendovla/exvla
+cd /home/rennc1/Documents/Yidong_code/exvla
 
 python sft_train.py \
   --data_path output_dir/gastrohun_llm_en_images_train_cot1.jsonl \
-  --image_dir /media/ren9/Elements/exvla_clinical \
+  --image_dir /media/rennc1/Elements/exvla_clinical \
   --runname sft_cot1_image_v1 \
   --mode 1 \
   --model qwen3_8b_instruct
@@ -54,10 +54,10 @@ Improvement: +20.00%
 
 
 # RFT from SFT checkpoint
-python /home/ren9/yidong-code/exendovla/exvla/rft_grpo_video_train.py \
---data_path /home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train.jsonl \
---image_dir /media/ren9/Elements/exvla_clinical/Labeled_Images \
---checkpoint /home/ren9/yidong-code/exendovla/exvla/models/train_sft_5090_10percent_image \
+python /home/rennc1/Documents/Yidong_code/exvla/rft_grpo_video_train.py \
+--data_path /home/rennc1/Documents/Yidong_code/exvla/output_dir/gastrohun_llm_en_images_train.jsonl \
+--image_dir /media/rennc1/Elements/exvla_clinical/Labeled_Images \
+--checkpoint /home/rennc1/Documents/Yidong_code/exvla/models/train_sft_5090_10percent_image \
 --runname grpo_5090_10percent_image \
 --mode 2 \
 --epochs 5 \

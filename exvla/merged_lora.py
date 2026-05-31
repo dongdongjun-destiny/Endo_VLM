@@ -3,8 +3,8 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, AutoModelForVision2Seq, AutoModelForCausalLM
 
-lora_path = "/home/ren9/yidong-code/exendovla/exvla/models/grpo_5090_10percent_image"
-save_path = "/home/ren9/yidong-code/exendovla/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
+lora_path = "/home/rennc1/Documents/Yidong_code/exvla/models/grpo_5090_10percent_image"
+save_path = "/home/rennc1/Documents/Yidong_code/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
 
 print("="*50)
 print("HuggingFace 模式，使用 GPU 融合...")

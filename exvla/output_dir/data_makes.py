@@ -32,7 +32,7 @@ import pandas as pd
 # CONFIG
 # =============================================================================
 
-ROOT_DIR = Path("/media/ren9/Elements/exvla_clinical")
+ROOT_DIR = Path("/media/rennc1/Elements/exvla_clinical")
 IMAGE_SPLIT_CSV = ROOT_DIR / "official_splits" / "image_classification.csv"
 SEQ_SPLIT_CSV = ROOT_DIR / "official_splits" / "sequence_classification.csv"
 

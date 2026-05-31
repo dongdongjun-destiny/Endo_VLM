@@ -22,9 +22,9 @@ from inference_core import (
     load_jsonl,
 )
 
-DEFAULT_MODEL = "/home/ren9/yidong-code/exendovla/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
-DEFAULT_JSONL = "/home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train.jsonl"
-DEFAULT_EXCEL = "/home/ren9/yidong-code/exendovla/exvla/evaluation_report_clinical_metrics.xlsx"
+DEFAULT_MODEL = "/home/rennc1/Documents/Yidong_code/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
+DEFAULT_JSONL = "/home/rennc1/Documents/Yidong_code/exvla/output_dir/gastrohun_llm_en_images_train.jsonl"
+DEFAULT_EXCEL = "/home/rennc1/Documents/Yidong_code/exvla/evaluation_report_clinical_metrics.xlsx"
 
 _engine: Optional[EndoVLAInferenceEngine] = None
 _engine_path: Optional[str] = None
@@ -330,7 +330,7 @@ def build_ui(default_model: str) -> gr.Blocks:
                 )
                 with gr.Row():
                     test_jsonl = gr.Textbox(label="测试 JSONL", value=DEFAULT_JSONL)
-                    test_img_dir = gr.Textbox(label="image_dir", value="/media/ren9/Elements/exvla_clinical")
+                    test_img_dir = gr.Textbox(label="image_dir", value="/media/rennc1/Elements/exvla_clinical")
                 test_excel = gr.Textbox(label="输出 Excel", value=DEFAULT_EXCEL)
                 test_max = gr.Number(label="最多样本（0=全部）", value=0, precision=0)
                 test_btn = gr.Button("运行测试并导出 Excel", variant="primary")

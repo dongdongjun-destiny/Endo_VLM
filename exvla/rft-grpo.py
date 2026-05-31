@@ -345,17 +345,17 @@ def train_rft(model, processor, train_samples: List[Dict[str, Any]], args=None, 
     if args and getattr(args, "output_dir", None):
         output_dir = args.output_dir
     elif args and getattr(args, "runname", None):
-        output_dir = f"/home/ren9/yidong-code/exendovla/exvla/checkpoints/{args.runname}"
+        output_dir = f"/home/rennc1/Documents/Yidong_code/exvla/checkpoints/{args.runname}"
     else:
-        output_dir = "/home/ren9/yidong-code/exendovla/exvla/checkpoints/default_rft_run"
+        output_dir = "/home/rennc1/Documents/Yidong_code/exvla/checkpoints/default_rft_run"
 
     os.makedirs(output_dir, exist_ok=True)
 
    
     if args and getattr(args, "runname", None):
-        model_save_dir = f"/home/ren9/yidong-code/exendovla/exvla/models/{args.runname}"
+        model_save_dir = f"/home/rennc1/Documents/Yidong_code/exvla/models/{args.runname}"
     else:
-        model_save_dir = "/home/ren9/yidong-code/exendovla/exvla/models/default_rft_run"
+        model_save_dir = "/home/rennc1/Documents/Yidong_code/exvla/models/default_rft_run"
     print("\nCreating GRPO dataset...")
     train_dataset = create_grpo_dataset(train_samples, processor)
 

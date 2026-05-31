@@ -15,9 +15,9 @@ except ImportError:
     IMAGE_WIDTH, IMAGE_HEIGHT = 1024, 768 
 
 # ================= 1. 配置路径 =================
-model_path = "/home/ren9/yidong-code/exendovla/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
-test_jsonl_path = "/home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl"
-output_excel_path = "/home/ren9/yidong-code/exendovla/exvla/evaluation_report_clinical_metrics.xlsx"
+model_path = "/home/rennc1/Documents/Yidong_code/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
+test_jsonl_path = "/home/rennc1/Documents/Yidong_code/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl"
+output_excel_path = "/home/rennc1/Documents/Yidong_code/exvla/evaluation_report_clinical_metrics.xlsx"
 
 print("="*50)
 print("🚀 正在加载模型与处理器，请稍候...")
@@ -205,9 +205,9 @@ print("="*50)
 #     IMAGE_WIDTH, IMAGE_HEIGHT = 1024, 768 
 
 # # ================= 1. 配置路径 =================
-# model_path = "/home/ren9/yidong-code/exendovla/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
-# test_jsonl_path = "/home/ren9/yidong-code/exendovla/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl"
-# output_excel_path = "/home/ren9/yidong-code/exendovla/exvla/evaluation_report.xlsx"
+# model_path = "/home/rennc1/Documents/Yidong_code/exvla/models/grpo_5090_10percent_image_newDora_Ultimate_Merged"
+# test_jsonl_path = "/home/rennc1/Documents/Yidong_code/exvla/output_dir/gastrohun_llm_en_images_train_sft_10.jsonl"
+# output_excel_path = "/home/rennc1/Documents/Yidong_code/exvla/evaluation_report.xlsx"
 
 # print("="*50)
 # print("🚀 正在加载模型与处理器，请稍候...")

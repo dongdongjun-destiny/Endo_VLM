@@ -186,7 +186,7 @@ def main():
     print("Train with:")
     print(
         f"  python sft_train.py --data_path {stats['output']} "
-        f"--image_dir /media/ren9/Elements/exvla_clinical --runname sft_cot1_image --mode 1"
+        f"--image_dir /media/rennc1/Elements/exvla_clinical --runname sft_cot1_image --mode 1"
     )
 
 
